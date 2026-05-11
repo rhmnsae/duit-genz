@@ -18,6 +18,9 @@ module.exports = {
         brutal: '6px 6px 0 #111111',
         brutalSm: '3px 3px 0 #111111',
       },
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'monospace'],
+      },
     },
   },
   plugins: [],
