@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  presets: [require('nativewind/preset')],
-  content: ['./App.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
       colors: {
@@ -15,8 +14,9 @@ module.exports = {
         darkcard: '#1B1B1B',
       },
       boxShadow: {
-        brutal: '6px 6px 0 #111111',
-        brutalSm: '3px 3px 0 #111111',
+        brutal: '7px 7px 0 #111111',
+        brutalSm: '4px 4px 0 #111111',
+        brutalLg: '12px 12px 0 #111111',
       },
       fontFamily: {
         pixel: ['"Press Start 2P"', 'monospace'],
@@ -24,4 +24,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}

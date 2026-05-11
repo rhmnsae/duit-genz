@@ -1,43 +1,49 @@
 # Duit GenZ
 
-Aplikasi keuangan Gen Z dengan vibe neo-brutalism ala MUTATIT: simpel, playful, dan nggak bikin pusing.
+Website aplikasi keuangan Gen Z dengan tema neo-brutalism + pixel 8-bit ala MUTATIT.
 
 ## Stack
 
-- Expo / React Native
-- NativeWind + TailwindCSS
-- Supabase
-- Expo Image Picker
+- React JS
+- Vite
+- Tailwind CSS
+- Supabase JS
+- Lucide React icons
 
-## Fitur MVP
+## Struktur
 
-- Dashboard saldo, uang masuk, uang keluar
-- Catat transaksi lewat chat natural, contoh: `beli kopi 18rb`
-- Upload foto struk/bukti bayar sebagai fondasi OCR
-- Split bill patungan cepat
-- Schema Supabase untuk `transactions`, `budgets`, dan `split_bills`
+```text
+src/
+  components/   komponen reusable seperti Navbar, Button, Card
+  data/         mock data dashboard
+  lib/          koneksi Supabase
+  pages/        Landing, Login/Register, Dashboard
+  styles/       Tailwind dan global CSS
+supabase/
+  migrations/   SQL migration
+  schema.sql    schema referensi
+archive/
+  react-native-expo/ backup versi Expo lama
+```
 
-## Setup
+## Jalanin lokal
 
 ```bash
 npm install
-cp .env.example .env
-npm start
+npm run dev
 ```
 
-Isi `.env`:
+## Build
 
 ```bash
-EXPO_PUBLIC_SUPABASE_URL=https://PROJECT_ID.supabase.co
-EXPO_PUBLIC_SUPABASE_ANON_KEY=PASTE_ANON_KEY_DI_SINI
+npm run build
 ```
 
-Lalu jalankan SQL di `supabase/schema.sql` lewat Supabase SQL Editor.
+## Env Supabase
 
-## Catatan next step
+Copy `.env.example` ke `.env` lalu isi:
 
-- Tambah auth Supabase
-- Upload receipt ke Supabase Storage
-- OCR lokal/gratis untuk baca struk
-- Parser chat lebih pintar pakai Ollama lokal
-- Landing page marketing web
+```bash
+VITE_SUPABASE_URL=https://PROJECT_ID.supabase.co
+VITE_SUPABASE_ANON_KEY=PASTE_ANON_KEY_DI_SINI
+```

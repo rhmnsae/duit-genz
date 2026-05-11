@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #FAF9F6;
+  color: #111111;
+  font-family: 'Press Start 2P', monospace;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.pixel-bg {
+  background-image: linear-gradient(rgba(17,17,17,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,17,.04) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.brutal-card {
+  border: 3px solid #111111;
+  box-shadow: 7px 7px 0 #111111;
+}
+
+.brutal-card-sm {
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+}
